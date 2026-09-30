@@ -3,6 +3,7 @@ import CollectionView from './CollectionView';
 function Leaderboard() {
   return (
     <CollectionView
+      // Expected URL: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/
       endpointPath="/api/leaderboard/"
       title="Leaderboard"
       description="Rankings by weekly minutes and total points."

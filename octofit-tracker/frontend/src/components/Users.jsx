@@ -3,6 +3,7 @@ import CollectionView from './CollectionView';
 function Users() {
   return (
     <CollectionView
+      // Expected URL: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/users/
       endpointPath="/api/users/"
       title="Users"
       description="Profiles and goals for Octofit athletes."

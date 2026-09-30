@@ -3,6 +3,7 @@ import CollectionView from './CollectionView';
 function Teams() {
   return (
     <CollectionView
+      // Expected URL: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/teams/
       endpointPath="/api/teams/"
       title="Teams"
       description="Training groups and their current members."

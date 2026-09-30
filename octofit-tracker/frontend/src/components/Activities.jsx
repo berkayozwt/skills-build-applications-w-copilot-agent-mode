@@ -3,6 +3,7 @@ import CollectionView from './CollectionView';
 function Activities() {
   return (
     <CollectionView
+      // Expected URL: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/activities/
       endpointPath="/api/activities/"
       title="Activities"
       description="Recent training logs from the Octofit community."

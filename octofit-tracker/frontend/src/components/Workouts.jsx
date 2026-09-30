@@ -3,6 +3,7 @@ import CollectionView from './CollectionView';
 function Workouts() {
   return (
     <CollectionView
+      // Expected URL: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/workouts/
       endpointPath="/api/workouts/"
       title="Workouts"
       description="Suggested sessions matched to athlete goals."
