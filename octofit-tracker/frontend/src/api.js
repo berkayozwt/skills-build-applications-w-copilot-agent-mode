@@ -1,8 +1,8 @@
 const codespaceName = import.meta.env.VITE_CODESPACE_NAME;
 
 export const apiOriginUrl = codespaceName
-  ? `https://${codespaceName}-8000.app.github.dev`
-  : 'http://localhost:8000';
+  ? `https://${codespaceName}-8000.app.github.dev/api`
+  : 'http://localhost:8000/api';
 
 export const apiBaseUrl = `${apiOriginUrl}/api`;
 
