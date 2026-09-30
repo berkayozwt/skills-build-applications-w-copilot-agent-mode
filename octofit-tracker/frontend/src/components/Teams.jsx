@@ -3,7 +3,7 @@ import CollectionView from './CollectionView';
 function Teams() {
   return (
     <CollectionView
-      collection="teams"
+      endpointPath="/api/teams/"
       title="Teams"
       description="Training groups and their current members."
       renderCardTitle={(team) => team.name}

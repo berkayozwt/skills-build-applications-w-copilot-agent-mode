@@ -3,7 +3,7 @@ import CollectionView from './CollectionView';
 function Workouts() {
   return (
     <CollectionView
-      collection="workouts"
+      endpointPath="/api/workouts/"
       title="Workouts"
       description="Suggested sessions matched to athlete goals."
       renderCardTitle={(workout) => workout.title}

@@ -3,7 +3,7 @@ import CollectionView from './CollectionView';
 function Users() {
   return (
     <CollectionView
-      collection="users"
+      endpointPath="/api/users/"
       title="Users"
       description="Profiles and goals for Octofit athletes."
       renderCardTitle={(user) => user.displayName ?? user.username}

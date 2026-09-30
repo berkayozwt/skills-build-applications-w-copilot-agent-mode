@@ -3,7 +3,7 @@ import CollectionView from './CollectionView';
 function Leaderboard() {
   return (
     <CollectionView
-      collection="leaderboard"
+      endpointPath="/api/leaderboard/"
       title="Leaderboard"
       description="Rankings by weekly minutes and total points."
       renderCardTitle={(entry) => `#${entry.rank} ${entry.user?.displayName ?? 'Athlete'}`}

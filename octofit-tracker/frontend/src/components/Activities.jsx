@@ -3,7 +3,7 @@ import CollectionView from './CollectionView';
 function Activities() {
   return (
     <CollectionView
-      collection="activities"
+      endpointPath="/api/activities/"
       title="Activities"
       description="Recent training logs from the Octofit community."
       renderCardTitle={(activity) => activity.type}

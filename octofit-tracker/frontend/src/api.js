@@ -1,8 +1,10 @@
 const codespaceName = import.meta.env.VITE_CODESPACE_NAME;
 
-export const apiBaseUrl = codespaceName
-  ? `https://${codespaceName}-8000.app.github.dev/api`
-  : 'http://localhost:8000/api';
+export const apiOriginUrl = codespaceName
+  ? `https://${codespaceName}-8000.app.github.dev`
+  : 'http://localhost:8000';
+
+export const apiBaseUrl = `${apiOriginUrl}/api`;
 
 export const apiEnvironment = codespaceName ? `Codespace: ${codespaceName}` : 'Localhost fallback';
 
@@ -25,8 +27,9 @@ export function normalizeCollection(payload) {
   return [];
 }
 
-export async function fetchCollection(collection) {
-  const response = await fetch(`${apiBaseUrl}/${collection}/`);
+export async function fetchCollection(endpointPath) {
+  const path = endpointPath.startsWith('/') ? endpointPath : `/${endpointPath}`;
+  const response = await fetch(`${apiOriginUrl}${path}`);
 
   if (!response.ok) {
     throw new Error(`Request failed with status ${response.status}`);

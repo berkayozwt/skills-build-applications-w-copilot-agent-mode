@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchCollection } from '../api';
 
-function CollectionView({ collection, title, description, columns, renderCardTitle }) {
+function CollectionView({ endpointPath, title, description, columns, renderCardTitle }) {
   const [items, setItems] = useState([]);
   const [status, setStatus] = useState('loading');
   const [error, setError] = useState('');
@@ -11,7 +11,7 @@ function CollectionView({ collection, title, description, columns, renderCardTit
 
     async function loadItems() {
       try {
-        const nextItems = await fetchCollection(collection);
+        const nextItems = await fetchCollection(endpointPath);
         if (isMounted) {
           setItems(nextItems);
           setStatus('ready');
@@ -29,7 +29,7 @@ function CollectionView({ collection, title, description, columns, renderCardTit
     return () => {
       isMounted = false;
     };
-  }, [collection]);
+  }, [endpointPath]);
 
   return (
     <section className="data-section">
